@@ -1,0 +1,149 @@
+Efficient,Modbus TCP register mapping file with minimal gaps between registers (64 bit Max size),,,,,,,,,,
+,,,,,,,,,,,
+Dev_Name,Manufacturer,Dev_Type,Dev_Protocol,Template Name,Total_EDS_Parameters,,,,,,
+,,,,,,,,,,,
+3C - Magnum PXR 20/25,Eaton,Protection,,,143,,,,,,
+,Category,Modbus TCP Register (1-based),Description,Register Count,Type ID,Units,Writable,Possible Values,,Data Trendable,Function Code
+,Device Property,40000,family,32,STRING,,No,,,No,03 or 04
+,Device Property,40032,model_series,32,STRING,,No,,,No,03 or 04
+,Device Property,40064,model,32,STRING,,No,,,No,03 or 04
+,Device Property,40096,name,32,STRING,,No,,,No,03 or 04
+,Device Property,40128,canonical_model_name,32,STRING,,No,,,No,03 or 04
+,Device Property,40160,network_address,32,STRING,,No,,,No,03 or 04
+,Device Property,40192,serial,32,STRING,,No,,,No,03 or 04
+,Device Property,40224,vendor,32,STRING,,No,,,No,03 or 04
+,Device Property,40256,asset_id,32,STRING,,No,,,No,03 or 04
+,Device Property,40288,location,32,STRING,,No,,,No,03 or 04
+,Device Property,40320,contact,32,STRING,,No,,,No,03 or 04
+,Device Property,40384,software_version,32,STRING,,No,,,No,03 or 04
+,Device Property,40416,symbol_canonical_name,32,STRING,,No,,,No,03 or 04
+,Device Property,40480,waveform_enabled,2,UINT32,,No,,,No,03 or 04
+,Operations,1000,Status,2,INT32,,No,Unknown(0);Open(1);Closed(2);Tripped(3);Alarmed(4);Picked-up(13);,,No,03 or 04
+,Operations,1002,Status Secondary,2,INT32,,No,Not Applicable(1);Test mode(3);Powered up(7);Alarm(8);,,No,03 or 04
+,Operations,1004,Cause of Status,2,INT32,,No,Unknown(0);Normal(1);Instantaneous(3);Inst neutral over current(5);Over voltage(11);Under voltage(12);Auxiliary Under Voltage(14);Current unbalance(17);Voltage unbalance(18);Operations count(31);Control via comms(33);Coil supervision(37);Battery low(41);Long delay(61);Short delay(62);Reverse power(65);Phase current loss(69);High Load Alarm 1(73);Making current release(75);Fixed hardware Inst(76);Setpoints error(77);Over temperature(78);Long delay neutral over current(80);Ground fault(84);Earth fault(85);Calibration(113);Real time clock(136);MM mode(153);Breaker mechanism fault(154);Short delay neutral over current(158);Thermal Memory Alarm(159);Trip breaker from LCD side(160);High Load Alarm 2(161);Ground fault pre-alarm(162);High temperature Alarm(163);Non-volatile memory error(2045);Watchdog fault(2046);,,No,03 or 04
+,Operations,1006,Op Count,2,UINT32,,No,,,No,03 or 04
+,Operations,1008,Short Circuit Fault,2,UINT32,,No,,,Yes,03 or 04
+,Operations,1010,Overload Fault,2,UINT32,,No,,,Yes,03 or 04
+,Operations,1012,ARMS Level,2,UINT32,amperes,No,,,No,03 or 04
+,Operations,1014,Frame,2,INT32,,No,NRX-NF or IZMX16(0);NRX-RF or IZMX40(1);Magnum Standard(2);Magnum Narrow(3);Magnum Standard Double Wide(4);Magnum Narrow Double Wide(5);MCCB(6);,,No,03 or 04
+,Operations,1016,Plug,2,UINT32,amperes,No,,,No,03 or 04
+,Voltage,1018,Vab,2,FLOAT,volts,No,,,Yes,03 or 04
+,Voltage,1020,Vbc,2,FLOAT,volts,No,,,Yes,03 or 04
+,Voltage,1022,Vca,2,FLOAT,volts,No,,,Yes,03 or 04
+,Voltage,1024,V(L-L) Avg,2,FLOAT,volts,No,,,Yes,03 or 04
+,Voltage,1026,Van,2,FLOAT,volts,No,,,Yes,03 or 04
+,Voltage,1028,Vbn,2,FLOAT,volts,No,,,Yes,03 or 04
+,Voltage,1030,Vcn,2,FLOAT,volts,No,,,Yes,03 or 04
+,Voltage,1032,V(L-N) Avg,2,FLOAT,volts,No,,,Yes,03 or 04
+,Voltage,1034,Vab Min,2,FLOAT,volts,No,,,Yes,03 or 04
+,Voltage,1036,Vab Max,2,FLOAT,volts,No,,,Yes,03 or 04
+,Voltage,1038,Vbc Min,2,FLOAT,volts,No,,,Yes,03 or 04
+,Voltage,1040,Vbc Max,2,FLOAT,volts,No,,,Yes,03 or 04
+,Voltage,1042,Vca Min,2,FLOAT,volts,No,,,Yes,03 or 04
+,Voltage,1044,Vca Max,2,FLOAT,volts,No,,,Yes,03 or 04
+,Voltage,1046,Van Min,2,FLOAT,volts,No,,,Yes,03 or 04
+,Voltage,1048,Van Max,2,FLOAT,volts,No,,,Yes,03 or 04
+,Voltage,1050,Vbn Min,2,FLOAT,volts,No,,,Yes,03 or 04
+,Voltage,1052,Vbn Max,2,FLOAT,volts,No,,,Yes,03 or 04
+,Voltage,1054,Vcn Min,2,FLOAT,volts,No,,,Yes,03 or 04
+,Voltage,1056,Vcn Max,2,FLOAT,volts,No,,,Yes,03 or 04
+,Current,1058,Ia,2,FLOAT,amperes,No,,,Yes,03 or 04
+,Current,1060,Ib,2,FLOAT,amperes,No,,,Yes,03 or 04
+,Current,1062,Ic,2,FLOAT,amperes,No,,,Yes,03 or 04
+,Current,1064,Iavg,2,FLOAT,amperes,No,,,Yes,03 or 04
+,Current,1066,Ig,2,FLOAT,amperes,No,,,Yes,03 or 04
+,Current,1068,In,2,FLOAT,amperes,No,,,Yes,03 or 04
+,Current,1070,Ia Min,2,FLOAT,amperes,No,,,Yes,03 or 04
+,Current,1072,Ia Max,2,FLOAT,amperes,No,,,Yes,03 or 04
+,Current,1074,Ib Min,2,FLOAT,amperes,No,,,Yes,03 or 04
+,Current,1076,Ib Max,2,FLOAT,amperes,No,,,Yes,03 or 04
+,Current,1078,Ic Min,2,FLOAT,amperes,No,,,Yes,03 or 04
+,Current,1080,Ic Max,2,FLOAT,amperes,No,,,Yes,03 or 04
+,Current,1082,Ig Min,2,FLOAT,amperes,No,,,Yes,03 or 04
+,Current,1084,Ig Max,2,FLOAT,amperes,No,,,Yes,03 or 04
+,Current,1086,In Min,2,FLOAT,amperes,No,,,Yes,03 or 04
+,Current,1088,In Max,2,FLOAT,amperes,No,,,Yes,03 or 04
+,Power,1090,Real Power,2,FLOAT,watts,No,,,Yes,03 or 04
+,Power,1092,Reactive Power,2,FLOAT,voltamperesreactive,No,,,Yes,03 or 04
+,Power,1094,Apparent Power,2,FLOAT,voltamperes,No,,,Yes,03 or 04
+,PowerFactor,1096,PF Apparent,2,FLOAT,,No,,,Yes,03 or 04
+,Energy,1098,Energy Forward,4,DOUBLE,watthours,No,,,Yes,03 or 04
+,Energy,1102,Energy Reverse,4,DOUBLE,watthours,No,,,Yes,03 or 04
+,Energy,1106,Energy Net,4,DOUBLE,watthours,No,,,Yes,03 or 04
+,Energy,1110,Energy,4,DOUBLE,watthours,No,,,Yes,03 or 04
+,Energy,1114,Apparent Energy,4,DOUBLE,vahours,No,,,Yes,03 or 04
+,Demand,1118,Power Demand,2,FLOAT,watts,No,,,Yes,03 or 04
+,Demand,1120,Reactive Demand,2,FLOAT,voltamperesreactive,No,,,Yes,03 or 04
+,Demand,1122,Apparent Demand,2,FLOAT,voltamperes,No,,,Yes,03 or 04
+,Demand,1124,Real Peak Dmd,2,FLOAT,watts,No,,,Yes,03 or 04
+,Demand,1126,Reactive Pk Dmd,2,FLOAT,voltamperesreactive,No,,,Yes,03 or 04
+,Demand,1128,App Peak Demand,2,FLOAT,voltamperes,No,,,Yes,03 or 04
+,Frequency,1130,Frequency,2,FLOAT,hertz,No,,,Yes,03 or 04
+,Environment,1132,Device Temp,2,FLOAT,degreescelsius,No,,,Yes,03 or 04
+,Operations,1134,SDT count,2,UINT32,,No,,,No,03 or 04
+,Operations,1136,IDT count,2,UINT32,,No,,,No,03 or 04
+,Operations,1138,HCDT count,2,UINT32,,No,,,No,03 or 04
+,Operations,1140,LDT count,2,UINT32,,No,,,No,03 or 04
+,Operations,1142,GFT count,2,UINT32,,No,,,No,03 or 04
+,Operations,1144,TT count,2,UINT32,,No,,,No,03 or 04
+,Operations,1146,Test trip count,2,UINT32,,No,,,No,03 or 04
+,Operations,1148,Open by Comm count,2,UINT32,,No,,,No,03 or 04
+,Operations,1150,Manual open count,2,UINT32,,No,,,No,03 or 04
+,Time,1152,Time of Last Operation,3,DATE,,No,,,No,03 or 04
+,Environment,1155,Temp Maximum,2,FLOAT,degreescelsius,No,,,Yes,03 or 04
+,Time,1157,Time of Max Dev Temp,3,DATE,,No,,,No,03 or 04
+,Operations,1160,Running Time : Min,2,UINT32,,No,,,No,03 or 04
+,Operations,1162,Running Time : Hr,2,UINT32,,No,,,No,03 or 04
+,Operations,1164,Running Time : Day,2,UINT32,,No,,,No,03 or 04
+,Operations,1166,Life Point,2,UINT32,,No,,,No,03 or 04
+,Operations,1168,Breaker Health,2,UINT32,percent,No,,,Yes,03 or 04
+,Miscellaneous,44000,Entity Operating St,1,UINT16,,No,Offline(3);Online(4);,,No,03 or 04
+,Operations,1000,Brkr Position,1,BOOL,,No,Open(0);Closed(1);,,No,01 or 02
+,Operations,1001,Trip Event,1,BOOL,,No,Inactive(0);Active(1);,,No,01 or 02
+,Operations,1002,ARMS Mode,1,BOOL,,No,Inactive(0);Active(1);,,No,01 or 02
+,Operations,1003,ARMS Mode Off,1,BOOL,,No,Inactive(0);Active(1);,,No,01 or 02
+,Operations,1004,ARMS Local Control,1,BOOL,,No,Inactive(0);Active(1);,,No,01 or 02
+,Operations,1005,Unknown,1,BOOL,,No,False(0);True(1);,,No,01 or 02
+,Operations,1006,Inst Trip,1,BOOL,,No,False(0);True(1);,,No,01 or 02
+,Operations,1007,Aux Under Volt,1,BOOL,,No,False(0);True(1);,,No,01 or 02
+,Operations,1008,Curr Unbalance,1,BOOL,,No,Inactive(0);Active(1);,,No,01 or 02
+,Operations,1009,Operations Count Alm,1,BOOL,,No,False(0);True(1);,,No,01 or 02
+,Operations,1010,Communications,1,BOOL,,No,False(0);True(1);,,No,01 or 02
+,Operations,1011,Coil Supervision,1,BOOL,,No,False(0);True(1);,,No,01 or 02
+,Operations,1012,Diagnostic Warn,1,BOOL,,No,False(0);True(1);,,No,01 or 02
+,Operations,1013,Long Delay,1,BOOL,,No,False(0);True(1);,,No,01 or 02
+,Operations,1014,Short Delay,1,BOOL,,No,False(0);True(1);,,No,01 or 02
+,Operations,1015,High Load,1,BOOL,,No,False(0);True(1);,,No,01 or 02
+,Operations,1016,Making Curr Release,1,BOOL,,No,False(0);True(1);,,No,01 or 02
+,Operations,1017,Fixed Inst,1,BOOL,,No,False(0);True(1);,,No,01 or 02
+,Operations,1018,Setpoints Err,1,BOOL,,No,False(0);True(1);,,No,01 or 02
+,Operations,1019,Over Temp,1,BOOL,,No,False(0);True(1);,,No,01 or 02
+,Operations,1020,Neutral,1,BOOL,,No,False(0);True(1);,,No,01 or 02
+,Operations,1021,Gnd Fault Alm,1,BOOL,,No,False(0);True(1);,,No,01 or 02
+,Operations,1022,Earth Fault,1,BOOL,,No,False(0);True(1);,,No,01 or 02
+,Operations,1023,Calibration,1,BOOL,,No,False(0);True(1);,,No,01 or 02
+,Operations,1024,Real-Time Clock,1,BOOL,,No,False(0);True(1);,,No,01 or 02
+,Operations,1025,Brkr Mech Fault,1,BOOL,,No,False(0);True(1);,,No,01 or 02
+,Operations,1026,Non-Volatile Memory Failure,1,BOOL,,No,False(0);True(1);,,No,01 or 02
+,Operations,1027,Watchdog,1,BOOL,,No,False(0);True(1);,,No,01 or 02
+,Operations,1028,Battery Low Voltage Alarm,1,BOOL,,No,False(0);True(1);,,No,01 or 02
+,Operations,1029,Digital Bypass,1,BOOL,,No,False(0);True(1);,,No,01 or 02
+,Operations,1030,Motor Alarm,1,BOOL,,No,False(0);True(1);,,No,01 or 02
+,Operations,1031,Maint Mode,1,BOOL,,No,False(0);True(1);,,No,01 or 02
+,Operations,1032,Comm Status,1,BOOL,,No,Not Commissioned(0);Commissioned(1);,,No,01 or 02
+,Command,45000,Reset Trip,1,BOOL,,Yes,True(1),,No,05 or 0F
+,Command,45001,Reset Power-up Indicator,1,BOOL,,Yes,True(1),,No,05 or 0F
+,Command,45002,Reset Peak Demand Watts,1,BOOL,,Yes,True(1),,No,05 or 0F
+,Command,45003,Reset Energy,1,BOOL,,Yes,True(1),,No,05 or 0F
+,Command,45004,Reset Operations Count,1,BOOL,,Yes,True(1),,No,05 or 0F
+,Command,45005,Reset Runtime,1,BOOL,,Yes,True(1),,No,05 or 0F
+,Command,45006,Reset All Min/Max Values,1,BOOL,,Yes,True(1),,No,05 or 0F
+,Command,45007,Reset Min/Max Current,1,BOOL,,Yes,True(1),,No,05 or 0F
+,Command,45008,Reset Min/Max L-L Voltages,1,BOOL,,Yes,True(1),,No,05 or 0F
+,Command,45009,Reset Min/Max L-N Voltages,1,BOOL,,Yes,True(1),,No,05 or 0F
+,Command,45010,Reset Trip Count,1,BOOL,,Yes,True(1),,No,05 or 0F
+,Command,45011,ARMS On,1,BOOL,,Yes,True(1),,No,05 or 0F
+,Command,45012,ARMS Off,1,BOOL,,Yes,True(1),,No,05 or 0F
+,Command,45013,Commission PXR Communications,1,BOOL,,Yes,True(1),,No,05 or 0F
+,Command,45014,Open Breaker,1,BOOL,,Yes,True(1),,No,05 or 0F
+,Command,45015,Close Breaker,1,BOOL,,Yes,True(1),,No,05 or 0F
