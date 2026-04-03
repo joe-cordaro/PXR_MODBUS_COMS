@@ -4,7 +4,7 @@ from pymodbus.framer import FramerType
 
 IP_Address = "172.22.17.254" #"192.168.2.1"
 Port = 502 #Com2, Com1 is 26501
-#Framer = FramerType.RTU
+Framer = FramerType.RTU
 C = 32
 UnitID = 5
 RegAddress = 1016
@@ -15,10 +15,9 @@ def read_RTU_over_TCP():
 # Connection to TCP/IP
     client = ModbusTcpClient(
         host = IP_Address, 
-        port = Port
-    
-        #framer = Framer, 
-        #timeout= 3
+        port = Port,
+        framer = Framer, 
+        timeout= 3
     ) 
     
     connected = client.connect()
